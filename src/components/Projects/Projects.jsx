@@ -6,6 +6,7 @@ import {getImageUrl} from "../../utils"
 export const Projects = ({language}) => {
     const {t, i18n} = useTranslation();
     const [projects, setProjects] = useState([]);
+    const [filter, setFilter] = useState("All");
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -21,11 +22,41 @@ export const Projects = ({language}) => {
         fetchProjects();
     }, [i18n.language]);
 
+    // Define your filters here. You can add more if you like!
+    const filters = ["All", "Python", "React", "Data Science"];
+
+    const filteredProjects = projects.filter((project) => {
+        if (filter === "All") return true;
+
+        // Custom logic for "Data Science" to catch multiple related skills
+        if (filter === "Data Science") {
+            const dsSkills = ["pandas", "keras", "bert", "numpy", "matplotlib", "tensorflow"];
+            return project.skills.some(skill => dsSkills.includes(skill.toLowerCase()));
+        }
+
+        // Default logic: does the skills array contain the filter name?
+        return project.skills.some(skill => skill.toLowerCase() === filter.toLowerCase());
+    });
+
     return (
         <section className={styles.container}>
             <h2 className={styles.title} id="projects">{t('projects')}</h2>
+
+            {/* Filter Buttons */}
+            <div className={styles.filterContainer}>
+                {filters.map((category) => (
+                    <button
+                        key={category}
+                        className={`${styles.filterBtn} ${filter === category ? styles.activeFilter : ''}`}
+                        onClick={() => setFilter(category)}
+                    >
+                        {category}
+                    </button>
+                ))}
+            </div>
+
             <div className={styles.projectsGrid}>
-                {projects.map((project, id) => {
+                {filteredProjects.map((project, id) => {
                     return (
                         <div key={id} className={styles.card}>
                             <img src={getImageUrl(project.imgSrc)} alt={`Image of ${project.title}`}
@@ -38,9 +69,10 @@ export const Projects = ({language}) => {
                                 ))}
                             </ul>
                             <div className={styles.linksContainer}>
-                                {project.link && <a href={project.link} className={styles.linkBtn}>{t('link')}</a>}
-                                {project.source &&
-                                    <a href={project.source} className={styles.linkBtn}>{t('source')}</a>}
+                                {project.link && <a href={project.link} className={styles.linkBtn} target="_blank"
+                                                    rel="noopener noreferrer">{t('link')}</a>}
+                                {project.source && <a href={project.source} className={styles.linkBtn} target="_blank"
+                                                      rel="noopener noreferrer">{t('source')}</a>}
                             </div>
                         </div>
                     );
