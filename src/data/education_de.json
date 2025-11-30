@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Bachelor of Science: Informatik",
+        "institute": "Ludwig-Maximilians-Universität",
+        "link": "https://www.lmu.de/de/",
+        "year": "2021 - Heute",
+        "description": "Hauptfach Informatik mit Schwerpunkt Data Science und Software Engineering. Nebenfach Statistik.",
+        "imgSrc": "experience/lmu_logo.jpeg",
+        "skills": [
+            "Algorithmen",
+            "Software Engineering",
+            "Data Science",
+            "Statistik"
+        ]
+    }
+]

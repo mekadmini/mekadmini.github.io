@@ -4,15 +4,16 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Contact } from "./components/Contact/Contact";
 import { Projects } from "./components/Projects/Projects";
 import { Experience } from "./components/Experience/Experience";
+import { Education } from "./components/Education/Education";
 
 function App() {
-
   return (
     <div className={styles.App}>
       <Navbar />
       <Hero />
       <Projects />
       <Experience />
+      <Education />
       <Contact />
     </div>
   )

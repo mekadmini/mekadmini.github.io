@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Bachelor of Science: Computer Science",
+        "institute": "Ludwig-Maximilians-University",
+        "link": "https://www.lmu.de/en/",
+        "year": "2021 - Present",
+        "description": "Major in Computer Science with a focus on Data Science and Software Engineering. Minor in Statistics.",
+        "imgSrc": "experience/lmu_logo.jpeg",
+        "skills": [
+            "Algorithms",
+            "Software Engineering",
+            "Data Science",
+            "Statistics"
+        ]
+    }
+]
