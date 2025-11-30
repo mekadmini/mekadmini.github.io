@@ -1,12 +1,12 @@
 [
-    {
+   {
         "id": 1,
-        "title": "Tutor/Student assistant",
-        "institute":"Ludwig-Maximilians-University",
-        "link":"https://www.lmu.de/en/index.html",
-        "year":"(10/2021 - present)",
-        "description": "Tutor for the lecture introduction to programming.",
-        "imgSrc": "experience/lmu_logo.jpeg",
+        "title": "Software Engineer",
+        "institute":"Rohde & Schwarz",
+        "link":"https://www.rohde-schwarz.de/de/startseite_48230.html",
+        "year":"(06/2024 - present)",
+        "description": "\n- Automated 3GPP spec updates, reducing manual effort from one month to one week using GitLab CI/CD pipelines.\n- Provisioned build nodes with Ansible, reducing setup time from 2+ hours to fully automated configuration.\n- Migrated legacy Jenkins pipelines and hardware-dependent CI jobs to Docker-based GitLab runners.\n- Enhanced compliance pipelines with automated SBOM generation and publishing. \n- Developed Python tools for CI/CD automation and dependency management across 20+ repositories.",
+        "imgSrc": "experience/rohde_schwarz_logo.png",
         "skills": [
             "python",
             "bert",
@@ -20,24 +20,8 @@
         "title": "Tutor/Student assistant",
         "institute":"Ludwig-Maximilians-University",
         "link":"https://www.lmu.de/en/index.html",
-        "year":"(04/2022 - 08/2023)",
-        "description": "Tutor for the lecture programming and modelling.",
-        "imgSrc": "experience/lmu_logo.jpeg",
-        "skills": [
-            "python",
-            "bert",
-            "keras",
-            "pandas",
-            "git"
-        ]
-    },
-    {
-        "id": 3,
-        "title": "Tutor/Student assistant",
-        "institute":"Ludwig-Maximilians-University",
-        "link":"https://www.lmu.de/en/index.html",
-        "year":"(10/2023 - 02/2024)",
-        "description": "Tutor for the software development course for minor students.",
+        "year":"(10/2021 - 04/2024)",
+        "description": "\n- Led tutorials in **Java** and **Haskell** for 35+ students, applying theory to hands-on coding.\n- Guided teams in **Python** software labs, focusing on debugging and best practices.\n- Supported students with preparation, conceptual guidance, and one-on-one mentoring.\n- Supervised and graded semester exams.\n- Reviewed team projects and coursework, giving feedback on both code and collaboration.",
         "imgSrc": "experience/lmu_logo.jpeg",
         "skills": [
             "python",
@@ -47,4 +31,5 @@
             "git"
         ]
     }
+
 ]

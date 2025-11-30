@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react"
+import React, {useEffect, useState} from "react"
 import styles from "./Projects.module.css"
-import { useTranslation } from 'react-i18next';
-import { getImageUrl } from "../../utils"
+import {useTranslation} from 'react-i18next';
+import {getImageUrl} from "../../utils"
 
-export const Projects = ({ language }) => {
-    const { t, i18n } = useTranslation();
+export const Projects = ({language}) => {
+    const {t, i18n} = useTranslation();
     const [projects, setProjects] = useState([]);
-    // alert(i18n.language);
+    const [filter, setFilter] = useState("All");
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -21,31 +21,52 @@ export const Projects = ({ language }) => {
 
         fetchProjects();
     }, [i18n.language]);
-    return (
-        <section className={styles.container}>
-            <h2 className={styles.title} id="projects">{t('projects')}</h2>
-            <div>
-                {projects.map((project, id) => {
-                    return (
-                        <div key={id} className={styles.projects}>
-                            <img src={getImageUrl(project.imgSrc)} width="200" alt={`Image of ${project.title}`} className={styles.imgSrc}></img>
-                            <div className={styles.projectsContainer}>
-                                <h3 >{project.title}</h3>
 
-                                <p className={styles.projectDescription}>{project.description}</p>
-                                <div className={styles.skills}>
-                                    {project.skills.map((skill, id) => {
-                                        return (
-                                            <li key={id} className={styles.skill}>
-                                                {skill}
-                                            </li>
-                                        );
-                                    })}
-                                </div>
-                                <div className={styles.linksContainer}>
-                                    <a href={project.link} className={styles.linkBtn}>{t('link')}</a>
-                                    <a href={project.source} className={styles.linkBtn}>{t('source')}</a>
-                                </div>
+    const filters = ["All", "Python", "React", "Data Science"];
+
+    const filteredProjects = projects.filter((project) => {
+        if (filter === "All") return true;
+        if (filter === "Data Science") {
+            const dsSkills = ["pandas", "keras", "bert", "numpy", "matplotlib", "tensorflow"];
+            return project.skills.some(skill => dsSkills.includes(skill.toLowerCase()));
+        }
+        return project.skills.some(skill => skill.toLowerCase() === filter.toLowerCase());
+    });
+
+    return (
+        <section className={styles.container} id="projects"> {/* Moved ID here */}
+            <h2 className={styles.title}>{t('projects')}</h2>
+
+            <div className={styles.filterContainer}>
+                {filters.map((category) => (
+                    <button
+                        key={category}
+                        className={`${styles.filterBtn} ${filter === category ? styles.activeFilter : ''}`}
+                        onClick={() => setFilter(category)}
+                    >
+                        {category}
+                    </button>
+                ))}
+            </div>
+
+            <div className={styles.projectsGrid}>
+                {filteredProjects.map((project, id) => {
+                    return (
+                        <div key={id} className={styles.card}>
+                            <img src={getImageUrl(project.imgSrc)} alt={`Image of ${project.title}`}
+                                 className={styles.imgSrc}></img>
+                            <h3 className={styles.projectTitle}>{project.title}</h3>
+                            <p className={styles.projectDescription}>{project.description}</p>
+                            <ul className={styles.skills}>
+                                {project.skills.map((skill, id) => (
+                                    <li key={id} className={styles.skill}>{skill}</li>
+                                ))}
+                            </ul>
+                            <div className={styles.linksContainer}>
+                                {project.link && <a href={project.link} className={styles.linkBtn} target="_blank"
+                                                    rel="noopener noreferrer">{t('link')}</a>}
+                                {project.source && <a href={project.source} className={styles.linkBtn} target="_blank"
+                                                      rel="noopener noreferrer">{t('source')}</a>}
                             </div>
                         </div>
                     );

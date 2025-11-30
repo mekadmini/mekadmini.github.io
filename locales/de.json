@@ -1,14 +1,21 @@
 {
     "projects": "Projekte",
+    "skills": "Technische Fähigkeiten",
     "hello": "Hallo Welt,",
-    "i am mohamed":"Ich bin Mohamed!",
+    "i am mohamed": "Ich bin Mohamed!",
+    "im_a": "Ich bin ",
+    "role_1": "Softwareentwickler",
+    "role_2": "Data Scientist",
+    "role_3": "Informatikstudent",
     "about": "Über mich",
     "contact": "Kontakt",
-    "contact me": "Kontaktieren Sie mich.",
+    "contact me": "Kontaktieren",
+    "download_cv": "Lebenslauf",
     "experience": "Erfahrung",
-    "hero description": "Ich bin ein Informatikstudent, angehender Softwareentwickler und Data Science-Enthusiast.",
+    "education": "Ausbildung",
+    "hero description": "Ich bin ein professioneller Software Engineer und Masterstudent im Bereich Data Science, mit einer Leidenschaft für Machine Learning, DevOps und dafür, Dinge zu bauen, die das Leben ein bisschen einfacher machen.",
     "feel free to contact me": "Ich freue mich auf Ihre Kontaktaufnahme!",
-    "cv":"Lebenslauf",
-    "link":"Link",
-    "source":"Quelle"
+    "cv": "Lebenslauf",
+    "link": "Link",
+    "source": "Quelle"
 }

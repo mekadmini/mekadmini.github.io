@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react"
+import React, {useEffect, useState} from "react"
 import styles from "./Experience.module.css"
-import { useTranslation } from 'react-i18next';
-import { getImageUrl } from "../../utils"
+import {useTranslation} from 'react-i18next';
+import {getImageUrl} from "../../utils"
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
-export const Experience = ({ language }) => {
-    const { t, i18n } = useTranslation();
+export const Experience = ({language}) => {
+    const {t, i18n} = useTranslation();
     const [experience, setExperience] = useState([]);
-    // alert(i18n.language);
 
     useEffect(() => {
         const fetchExperience = async () => {
@@ -21,27 +22,32 @@ export const Experience = ({ language }) => {
 
         fetchExperience();
     }, [i18n.language]);
+
     return (
-        <section className={styles.container}>
-            <h2 className={styles.title} id="experience">{t('experience')}</h2>
+        <section className={styles.container} id="experience"> {/* Moved ID here */}
+            <h2 className={styles.title}>{t('experience')}</h2>
             <div className={styles.timeline}>
                 {experience.map((myExperience, id) => {
                     return (
-                        <div id={id} className={styles.timelineItem}>
-                            <a href={myExperience.link}><img src={getImageUrl(myExperience.imgSrc)} className={styles.imgSrc} width="100"></img></a>
+                        <div key={id} className={styles.timelineItem}>
+                            <div className={styles.cardHeader}>
+                                <a href={myExperience.link} target="_blank" rel="noopener noreferrer">
+                                    <img src={getImageUrl(myExperience.imgSrc)} className={styles.imgSrc}
+                                         alt={myExperience.title}/>
+                                </a>
+                                <h3 className={styles.titleText}>{myExperience.title}</h3>
+                                <h4 className={styles.institute}>{myExperience.institute}</h4>
+                                <h4 className={styles.year}>{myExperience.year}</h4>
+                            </div>
                             <div className={styles.timelineContent}>
-                                <h3>{myExperience.title}</h3>
-                                <h4>{myExperience.institute}</h4>
-                                <h4>{myExperience.year}</h4>
-                                <p>{myExperience.description}</p>
+                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                    {myExperience.description}
+                                </ReactMarkdown>
                             </div>
                         </div>
-
                     );
                 })}
-
             </div>
         </section>
     );
-
 }

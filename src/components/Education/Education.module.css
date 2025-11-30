@@ -4,6 +4,8 @@
     margin-top: 76px;
     margin-left: 10%;
     margin-right: 10%;
+    /* Keep a large gap here to separate it from Contact */
+    margin-bottom: 150px;
     color: var(--color-text);
     display: flex;
     flex-direction: column;
@@ -18,7 +20,6 @@
     text-transform: uppercase;
 }
 
-/* Grid/Flex Layout for the Cards */
 .timeline {
     display: flex;
     flex-direction: row;
@@ -28,7 +29,6 @@
     width: 100%;
 }
 
-/* Individual Experience Card */
 .timelineItem {
     background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0.4) 100%);
     border-radius: 20px;
@@ -37,16 +37,14 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 350px; /* Prevents cards from getting too wide on large screens */
-    min-height: 400px;
+    max-width: 400px;
+    min-height: 350px;
 
-    /* Glassmorphism Effect */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
 
-    /* Hover Animation */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
@@ -56,7 +54,6 @@
     background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0.7) 100%);
 }
 
-/* Header Section (Logo, Title, Date) */
 .cardHeader {
     display: flex;
     flex-direction: column;
@@ -64,16 +61,16 @@
     text-align: center;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
 }
 
 .imgSrc {
     width: 80px;
     height: 80px;
-    object-fit: contain; /* Ensures logo fits well */
+    object-fit: contain;
     margin-bottom: 15px;
-    background-color: white; /* Optional: Makes transparent logos visible */
+    background-color: white;
     border-radius: 50%;
     padding: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -89,52 +86,36 @@
 .institute {
     font-size: 16px;
     font-weight: 400;
-    color: #cccccc; /* Muted text for hierarchy */
+    color: #cccccc;
     margin-bottom: 8px;
 }
 
 .year {
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-primary); /* Highlight color */
+    color: var(--color-primary);
     background: rgba(87, 108, 188, 0.1);
     padding: 4px 12px;
     border-radius: 12px;
 }
 
-/* Markdown Description Area */
 .timelineContent {
     font-size: 16px;
     line-height: 1.6;
     color: #efefef;
     width: 100%;
-    text-align: left;
+    text-align: center;
     font-family: var(--font-roboto);
 }
 
-/* Specific styles for Markdown lists */
-.timelineContent ul {
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-.timelineContent li {
-    margin-bottom: 8px;
-}
-
-/* Mobile Responsiveness */
 @media screen and (max-width: 830px) {
     .container {
         margin-left: 5%;
         margin-right: 5%;
-    }
-
-    .timeline {
-        flex-direction: column;
-        align-items: center;
+        margin-bottom: 100px;
     }
 
     .timelineItem {
-        max-width: 100%; /* Cards take full width on mobile */
+        max-width: 100%;
     }
 }

@@ -1,12 +1,12 @@
 [
     {
         "id": 1,
-        "title": "Tutor/Studentische Hilfskraft",
-        "institute": "Ludwig-Maximilians-Universität",
-        "year": "(10/2021 - heute)",
-        "description": "Tutor für die Vorlesung Einführung in die Programmierung.",
-        "imgSrc": "experience/lmu_logo.jpeg",
-        "link":"https://www.lmu.de/de/index.html",
+        "title": "Software Engineer",
+        "institute": "Rohde & Schwarz",
+        "link": "https://www.rohde-schwarz.com/de/startseite_48230.html",
+        "year": "(06/2024 - heute)",
+        "description": "\n- Automatisierung von 3GPP-Spezifikationsaktualisierungen, Reduzierung des manuellen Aufwands von einem Monat auf eine Woche mittels GitLab CI/CD-Pipelines.\n- Bereitstellung von Build-Nodes mit Ansible, Reduzierung der Einrichtungszeit von über 2 Stunden auf eine vollautomatische Konfiguration.\n- Migration von Legacy-Jenkins-Pipelines und hardwareabhängigen CI-Jobs auf Docker-basierte GitLab-Runner.\n- Erweiterung von Compliance-Pipelines durch automatische SBOM-Generierung und -Veröffentlichung.\n- Entwicklung von Python-Tools für CI/CD-Automatisierung und Dependency Management über 20+ Repositories hinweg.",
+        "imgSrc": "experience/rohde_schwarz_logo.png",
         "skills": [
             "python",
             "bert",
@@ -19,25 +19,9 @@
         "id": 2,
         "title": "Tutor/Studentische Hilfskraft",
         "institute": "Ludwig-Maximilians-Universität",
-        "link":"https://www.lmu.de/de/index.html",
-        "year": "(04/2022 - 08/2023)",
-        "description": "Tutor für die Vorlesung Programmierung und Modellierung.",
-        "imgSrc": "experience/lmu_logo.jpeg",
-        "skills": [
-            "python",
-            "bert",
-            "keras",
-            "pandas",
-            "git"
-        ]
-    },
-    {
-        "id": 3,
-        "title": "Tutor/Studentische Hilfskraft",
-        "institute": "Ludwig-Maximilians-Universität",
-        "link":"https://www.lmu.de/de/index.html",
-        "year": "(10/2023 - 02/2024)",
-        "description": "Tutor für das Softwareentwicklungspraktikum für Nebenfächler.",
+        "link": "https://www.lmu.de/de/index.html",
+        "year": "(10/2021 - 04/2024)",
+        "description": "\n- Leitung von Tutorien in **Java** und **Haskell** für 35+ Studierende, Anwendung von Theorie in praxisnahem Coding.\n- Anleitung von Teams in **Python**-Softwarepraktika mit Fokus auf Debugging und Best Practices.\n- Unterstützung der Studierenden bei der Vorbereitung, konzeptionelle Beratung und 1-zu-1-Mentoring.\n- Aufsicht und Bewertung von Semesterprüfungen.\n- Review von Teamprojekten und Kursarbeiten mit Feedback zu Code und Zusammenarbeit.",
         "imgSrc": "experience/lmu_logo.jpeg",
         "skills": [
             "python",
