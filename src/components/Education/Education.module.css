@@ -4,6 +4,8 @@
     margin-top: 76px;
     margin-left: 10%;
     margin-right: 10%;
+    /* Added significant bottom margin to separate from Contact */
+    margin-bottom: 150px;
     color: var(--color-text);
     display: flex;
     flex-direction: column;
@@ -35,7 +37,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 400px; /* Slightly wider for education details */
+    max-width: 400px;
     min-height: 350px;
 
     backdrop-filter: blur(10px);
@@ -110,6 +112,7 @@
     .container {
         margin-left: 5%;
         margin-right: 5%;
+        margin-bottom: 80px; /* Slightly less margin on mobile */
     }
 
     .timelineItem {

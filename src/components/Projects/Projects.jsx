@@ -22,27 +22,21 @@ export const Projects = ({language}) => {
         fetchProjects();
     }, [i18n.language]);
 
-    // Define your filters here. You can add more if you like!
     const filters = ["All", "Python", "React", "Data Science"];
 
     const filteredProjects = projects.filter((project) => {
         if (filter === "All") return true;
-
-        // Custom logic for "Data Science" to catch multiple related skills
         if (filter === "Data Science") {
             const dsSkills = ["pandas", "keras", "bert", "numpy", "matplotlib", "tensorflow"];
             return project.skills.some(skill => dsSkills.includes(skill.toLowerCase()));
         }
-
-        // Default logic: does the skills array contain the filter name?
         return project.skills.some(skill => skill.toLowerCase() === filter.toLowerCase());
     });
 
     return (
-        <section className={styles.container}>
-            <h2 className={styles.title} id="projects">{t('projects')}</h2>
+        <section className={styles.container} id="projects"> {/* Moved ID here */}
+            <h2 className={styles.title}>{t('projects')}</h2>
 
-            {/* Filter Buttons */}
             <div className={styles.filterContainer}>
                 {filters.map((category) => (
                     <button

@@ -5,11 +5,9 @@ import {getImageUrl} from "../../utils"
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-
 export const Experience = ({language}) => {
     const {t, i18n} = useTranslation();
     const [experience, setExperience] = useState([]);
-    // alert(i18n.language);
 
     useEffect(() => {
         const fetchExperience = async () => {
@@ -24,9 +22,10 @@ export const Experience = ({language}) => {
 
         fetchExperience();
     }, [i18n.language]);
+
     return (
-        <section className={styles.container}>
-            <h2 className={styles.title} id="experience">{t('experience')}</h2>
+        <section className={styles.container} id="experience"> {/* Moved ID here */}
+            <h2 className={styles.title}>{t('experience')}</h2>
             <div className={styles.timeline}>
                 {experience.map((myExperience, id) => {
                     return (
@@ -46,12 +45,9 @@ export const Experience = ({language}) => {
                                 </ReactMarkdown>
                             </div>
                         </div>
-
                     );
                 })}
-
             </div>
         </section>
     );
-
 }

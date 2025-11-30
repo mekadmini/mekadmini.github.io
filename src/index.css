@@ -1,15 +1,26 @@
+:root {
+    font-family: var(--font-outfit);
+}
+
+html {
+    /* This works like magic: it forces the browser to stop scrolling
+       100px above the target, leaving space for your fixed Navbar. */
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: var(--font-outfit);
-    scroll-behavior: smooth;
+    /* font-family inheritance is handled by :root above, but keeping basic reset */
 }
 
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
     overflow-x: hidden;
+    font-family: var(--font-outfit);
 }
 
 /* Custom Scrollbar */

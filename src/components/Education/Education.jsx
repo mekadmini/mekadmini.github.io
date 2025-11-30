@@ -22,8 +22,8 @@ export const Education = () => {
     }, [i18n.language]);
 
     return (
-        <section className={styles.container}>
-            <h2 className={styles.title} id="education">{t('education')}</h2>
+        <section className={styles.container} id="education"> {/* Moved ID here */}
+            <h2 className={styles.title}>{t('education')}</h2>
             <div className={styles.timeline}>
                 {education.map((edu, id) => {
                     return (
