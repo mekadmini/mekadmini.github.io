@@ -11,6 +11,7 @@
     text-align: center;
     margin-bottom: 50px;
     letter-spacing: 1.75px;
+    text-transform: uppercase;
 }
 
 .projectsGrid {
@@ -30,6 +31,7 @@
     transition: transform 0.3s ease;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card:hover {
@@ -90,4 +92,21 @@
 
 .linkBtn:hover {
     background-color: var(--color-secondary);
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        /* Critical Fix: Reduce vertical spacing on mobile */
+        margin: 30px 5%;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .projectsGrid {
+        grid-template-columns: 1fr; /* Stack cards directly */
+        gap: 20px;
+    }
 }

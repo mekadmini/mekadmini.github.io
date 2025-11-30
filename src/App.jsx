@@ -5,43 +5,45 @@ import {Contact} from "./components/Contact/Contact";
 import {Projects} from "./components/Projects/Projects";
 import {Experience} from "./components/Experience/Experience";
 import {Education} from "./components/Education/Education";
+import {Skills} from "./components/Skills/Skills"; // Import Skills
 import {ScrollToTop} from "./components/ScrollToTop/ScrollToTop";
-import {RevealOnScroll} from "./components/RevealOnScroll/RevealOnScroll"; // Import wrapper
-import {Footer} from "./components/Footer/Footer"; // Import footer
+import {RevealOnScroll} from "./components/RevealOnScroll/RevealOnScroll";
+import {Footer} from "./components/Footer/Footer";
 
 function App() {
-  return (
-    <div className={styles.App}>
-      <div className={styles.topBlur} />
-      <div className={styles.bottomBlur} />
+    return (
+        <div className={styles.App}>
+            <div className={styles.topBlur}/>
+            <div className={styles.bottomBlur}/>
 
-      <Navbar />
+            <Navbar/>
 
-        {/* Hero usually doesn't need reveal animation as it's visible on load,
-          but you can wrap it if you want it to fade in too.
-          Usually, we leave Hero instant. */}
-      <Hero />
+            <Hero/>
 
-        <RevealOnScroll>
-            <Projects/>
-        </RevealOnScroll>
+            <RevealOnScroll>
+                <Skills/>
+            </RevealOnScroll>
 
-        <RevealOnScroll>
-            <Experience/>
-        </RevealOnScroll>
+            <RevealOnScroll>
+                <Projects/>
+            </RevealOnScroll>
 
-        <RevealOnScroll>
-            <Education/>
-        </RevealOnScroll>
+            <RevealOnScroll>
+                <Experience/>
+            </RevealOnScroll>
 
-        <RevealOnScroll>
-            <Contact/>
-        </RevealOnScroll>
+            <RevealOnScroll>
+                <Education/>
+            </RevealOnScroll>
 
-        <Footer/>
-        <ScrollToTop/>
-    </div>
-  )
+            <RevealOnScroll>
+                <Contact/>
+            </RevealOnScroll>
+
+            <Footer/>
+            <ScrollToTop/>
+        </div>
+    )
 }
 
 export default App

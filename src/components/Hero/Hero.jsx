@@ -4,7 +4,7 @@ import {getImageUrl} from "../../utils";
 import {useTranslation} from 'react-i18next';
 
 export const Hero = () => {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     return (
         <section className={styles.container}>
             <div className={styles.content}>
