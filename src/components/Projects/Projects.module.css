@@ -1,154 +1,93 @@
 @import "../../vars.css";
 
 .container {
-    margin-top: 76px;
-    margin-left: 2%;
-    margin-right: 2%;
-    background-color: var(--color-background);
-    /* border: 2px solid red; */
+    margin: 80px 10%;
+    color: var(--color-text);
 }
 
 .title {
     font-size: 35px;
-    font-weight: 700px;
-    letter-spacing: 1.75px;
+    font-weight: 700;
     text-align: center;
-    /* border: 2px solid red; */
+    margin-bottom: 50px;
+    letter-spacing: 1.75px;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.card {
+    background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
 
 .imgSrc {
-    border-radius: 40%;
-    /* border: 2px solid red; */
-    align-items: center;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    object-fit: cover;
 }
 
-.projects {
-    margin-top: 37px;
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
+.projectTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.projectsContainer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* border: 2px solid red; */
-}
-
-.linkBtn {
-    text-decoration: none;
+.projectDescription {
     text-align: center;
-    color: var(--color-text);
-    background-color: var(--color-primary);
-    border-radius: 100px;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 16px 26px;
-    margin-top: 20px;
-    position: center;
-    width: 150px;
-
-
-}
-
-.skill {
-    max-width: fit-content;
-    list-style: none;
-    color: var(--color-text);
-    background-color: rgb(143, 51, 153);
-    border-radius: 100px;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 10px 20px;
-    margin-top: 20px;
-    position: center;
-    width: 150px;
+    font-size: 16px;
+    color: #efefef;
+    margin-bottom: 20px;
 }
 
 .skills {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    /* border: 2px solid red; */
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.skill {
+    background-color: var(--color-dark);
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-size: 14px;
 }
 
 .linksContainer {
-    margin-top: 0px;
     display: flex;
-    flex-direction: row;
-    /* border: 2px solid red; */
-
-
+    gap: 20px;
 }
 
-a[href=""] {
-    background-color: gray;
-    pointer-events: none;
-    cursor: default;
-    display: none;
+.linkBtn {
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: background 0.3s;
 }
 
-.projectDescription {
-    display: flex;
-    flex-wrap: wrap;
-    /* border: 2px solid green; */
-}
-
-@media screen and (max-width:830px) {
-    .container {
-        align-items: center;
-        text-align: center;
-    }
-
-    .projects {
-        align-items: center;
-        border-radius: 10%;
-        text-align: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
-        /* border: 2px solid var(--color-primary); */
-        background-color: var(--color-dark);
-        backdrop-filter: blur(10px);
-        /* background-image: linear-gradient(to bottom, rgba(244, 149, 222, 0.3), rgba(255, 255, 255, 0)); */
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        opacity: 0.8;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .title {
-        text-align: center;
-    }
-
-    .projectsContainer {
-        display: flex;
-        flex-direction: column;
-        /* border: 2px solid green; */
-        align-items: center;
-        text-align: center;
-        margin-right:2%;
-        margin-left:2%;
-        margin-top: 2%;
-        margin-bottom: 2%;
-
-    }
-
-    .skills {
-        justify-content: center;
-        max-width: 300px;
-    }
-
-    .imgSrc {
-        margin-top: 20px;
-    }
-
-
+.linkBtn:hover {
+    background-color: var(--color-secondary);
 }
