@@ -4,7 +4,7 @@
     margin-top: 76px;
     margin-left: 10%;
     margin-right: 10%;
-    /* Added significant bottom margin to separate from Contact */
+    /* Keep a large gap here to separate it from Contact */
     margin-bottom: 150px;
     color: var(--color-text);
     display: flex;
@@ -112,7 +112,7 @@
     .container {
         margin-left: 5%;
         margin-right: 5%;
-        margin-bottom: 80px; /* Slightly less margin on mobile */
+        margin-bottom: 100px;
     }
 
     .timelineItem {

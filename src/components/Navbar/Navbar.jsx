@@ -15,11 +15,10 @@ export const Navbar = () => {
     useEffect(() => {
         const sections = document.querySelectorAll("section, footer");
 
+        // Observer for standard scrolling
         const observerOptions = {
             root: null,
-            // Critical Fix: "-45% 0px -45% 0px" means the section must cover the CENTER 10% of the screen to activate.
-            // This prevents "Contact" from activating until it's truly in focus.
-            rootMargin: "-45% 0px -45% 0px",
+            rootMargin: "-40% 0px -40% 0px", // 20% "Active Strip" in the middle of screen
             threshold: 0
         };
 
@@ -35,10 +34,24 @@ export const Navbar = () => {
             if (section.id) observer.observe(section);
         });
 
+        // FORCE "Contact" to be active if at the bottom of the page
+        const handleScroll = () => {
+            const scrollPosition = window.innerHeight + window.scrollY;
+            const pageHeight = document.documentElement.scrollHeight;
+
+            // If we are within 50px of the bottom, force 'contact'
+            if (scrollPosition >= pageHeight - 50) {
+                setActiveSection("contact");
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
         return () => {
             sections.forEach((section) => {
                 if (section.id) observer.unobserve(section);
             });
+            window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 

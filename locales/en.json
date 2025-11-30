@@ -3,14 +3,19 @@
     "skills": "Technical Skills",
     "hello": "Hello World,",
     "i am mohamed": "I'm Mohamed!",
+    "im_a": "I'm a ",
+    "role_1": "Software Developer",
+    "role_2": "Data Scientist",
+    "role_3": "CS Student",
     "about": "About",
     "contact": "Contact",
-    "contact me": "Contact Me.",
+    "contact me": "Contact Me",
+    "download_cv": "Download CV",
     "experience": "Experience",
     "education": "Education",
     "hero description": "I'm a computer science student, an aspiring software developer, and a data science enthusiast.",
     "feel free to contact me": "Feel free to contact me!",
     "cv": "CV",
-    "link":"Link",
-    "source":"Source"
+    "link": "Link",
+    "source": "Source"
 }
