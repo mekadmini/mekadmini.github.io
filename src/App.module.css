@@ -42,11 +42,19 @@
 }
 
 @keyframes moveTop {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(100px, 100px); }
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100px, 100px);
+    }
 }
 
 @keyframes moveBottom {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100px, -100px); }
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100px, -100px);
+    }
 }

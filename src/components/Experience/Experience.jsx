@@ -6,8 +6,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 
-export const Experience = ({ language }) => {
-    const { t, i18n } = useTranslation();
+export const Experience = ({language}) => {
+    const {t, i18n} = useTranslation();
     const [experience, setExperience] = useState([]);
     // alert(i18n.language);
 

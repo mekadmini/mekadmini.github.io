@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import styles from "./Education.module.css";
-import { useTranslation } from 'react-i18next';
-import { getImageUrl } from "../../utils";
+import {useTranslation} from 'react-i18next';
+import {getImageUrl} from "../../utils";
 
 export const Education = () => {
-    const { t, i18n } = useTranslation();
+    const {t, i18n} = useTranslation();
     const [education, setEducation] = useState([]);
 
     useEffect(() => {
@@ -30,7 +30,7 @@ export const Education = () => {
                         <div key={id} className={styles.timelineItem}>
                             <div className={styles.cardHeader}>
                                 <a href={edu.link} target="_blank" rel="noopener noreferrer">
-                                    <img src={getImageUrl(edu.imgSrc)} className={styles.imgSrc} alt={edu.title} />
+                                    <img src={getImageUrl(edu.imgSrc)} className={styles.imgSrc} alt={edu.title}/>
                                 </a>
                                 <h3 className={styles.titleText}>{edu.title}</h3>
                                 <h4 className={styles.institute}>{edu.institute}</h4>

@@ -3,8 +3,8 @@ import styles from "./Projects.module.css"
 import {useTranslation} from 'react-i18next';
 import {getImageUrl} from "../../utils"
 
-export const Projects = ({ language }) => {
-    const { t, i18n } = useTranslation();
+export const Projects = ({language}) => {
+    const {t, i18n} = useTranslation();
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
