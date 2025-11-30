@@ -9,6 +9,10 @@ import { Education } from "./components/Education/Education";
 function App() {
   return (
     <div className={styles.App}>
+      {/* Ambient Backgrounds */}
+      <div className={styles.topBlur} />
+      <div className={styles.bottomBlur} />
+
       <Navbar />
       <Hero />
       <Projects />

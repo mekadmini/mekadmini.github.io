@@ -1,88 +1,92 @@
 @import "../../vars.css";
 
 .container {
-    color: var(--color-text);
-    margin-top: 120px;
-    background-color: var(--color-secondary);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    /* width: 100vw; */
-    pad: 58px 10%;
-    gap: 10px;
+  color: var(--color-text);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 
+  /* Glassmorphism Card */
+  background: rgba(4, 21, 45, 0.5); /* Semi-transparent dark blue */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .text h2 {
-    margin-top: 20px;
-    font-size: 80px;
-    font-weight: 700;
-    letter-spacing: 4px;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
 
 .text p {
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #cccccc;
 }
 
 .links {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: flex-start; */
-    list-style: none;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  min-width: 250px;
 }
 
 .link {
-    display: flex;
-    gap: 25px;
-    /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-primary);
+  transform: translateX(10px); /* Slide effect */
 }
 
 .link a {
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 400;
-    letter-spacing: 1.5px;
-    text-align: center;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
-@media screen and (max-width:830px) {
-    .container {
-        flex-direction: column;
-        gap: 23px;
+.link img {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) invert(1); /* Forces icons to be white if they aren't already */
+}
 
-    }
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
 
-    .text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  .links {
+    width: 100%;
+  }
 
-
-
-    }
-
-    .text p {
-        text-align: center;
-
-
-
-    }
-
-    .links {
-        align-items: center;
-    }
-
-
-    .link {
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
+  .link {
+    justify-content: center;
+  }
 }
