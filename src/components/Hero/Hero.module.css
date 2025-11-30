@@ -5,11 +5,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 40px;
+    min-height: calc(100vh - 100px);
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
-    gap: 80px; /* Added significant space between text and image */
+    gap: 80px;
 }
 
 /* Background Glow Effect */
@@ -33,7 +33,7 @@
     align-items: flex-start;
     color: var(--color-text);
     z-index: 1;
-    flex: 1; /* Ensures text takes available space appropriately */
+    flex: 1;
 }
 
 .titleTyping {
@@ -56,19 +56,19 @@
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 120%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    margin-bottom: 20px; /* Added spacing below title */
+    margin-bottom: 20px;
 }
 
 .description {
     font-size: 30px;
     font-family: var(--font-roboto);
-    margin-bottom: 40px; /* Added spacing below description */
-    line-height: 1.5; /* Better readability */
+    margin-bottom: 40px;
+    line-height: 1.5;
 }
 
 .heroImg {
     width: 40%;
-    min-width: 350px; /* Prevents image from getting too small before break */
+    min-width: 350px;
     height: auto;
     z-index: 1;
     animation-name: floating;
@@ -117,56 +117,84 @@
     background-color: var(--color-secondary);
 }
 
-.scrollIcon {
+/* --- Scroll Indicator Styles --- */
+.scrollIndicator {
     position: absolute;
-    bottom: -80px; /* Moved down slightly to avoid cramping */
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 30px;
-    height: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 50px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 5px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     opacity: 0.8;
 }
 
-.scrollIcon::before {
-    content: '';
-    width: 6px;
-    height: 10px;
-    background: white;
-    border-radius: 50px;
-    animation: scroll 2s infinite;
+.mouse {
+    width: 26px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
 }
 
-@keyframes scroll {
+.wheel {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 6px;
+    background: white;
+    border-radius: 2px;
+    animation: scrollWheel 2s infinite;
+}
+
+.arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    animation: scrollArrow 2s infinite;
+    animation-delay: 0.2s; /* Delays arrow slightly for a "wave" effect */
+}
+
+@keyframes scrollWheel {
     0% {
-        transform: translateY(0);
+        top: 6px;
         opacity: 1;
     }
-    50% {
-        transform: translateY(10px);
-        opacity: 0;
-    }
     100% {
-        transform: translateY(0);
+        top: 20px;
         opacity: 0;
     }
 }
 
-/* Updated Breakpoint to 1150px to match Navbar */
+@keyframes scrollArrow {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+}
+
 @media screen and (max-width: 1150px) {
     .container {
         flex-direction: column-reverse;
-        gap: 40px; /* Reduce gap slightly for mobile stack */
-        margin-top: 80px; /* Give space from fixed navbar */
+        justify-content: center;
+        gap: 40px;
+        min-height: calc(100vh - 100px);
     }
 
     .title {
-        font-size: 50px; /* Slightly smaller text on mobile */
+        font-size: 50px;
         text-align: center;
     }
 
@@ -185,11 +213,12 @@
     }
 
     .heroImg {
-        width: 60%; /* Larger image when stacked */
+        width: 60%;
         min-width: 250px;
+        margin-bottom: 20px;
     }
 
-    .scrollIcon {
-        display: none; /* Often better to hide this on short mobile screens */
+    .scrollIndicator {
+        display: none; /* Hide on small mobile screens to save space */
     }
 }

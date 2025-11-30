@@ -15,8 +15,13 @@ export const Hero = () => {
             </div>
             <img src={getImageUrl("hero/mohamed.jpg")} alt="image of me" className={styles.heroImg}></img>
 
-            {/* Scroll Indicator */}
-            <div className={styles.scrollIcon}></div>
+            {/* New Clear Scroll Indicator */}
+            <div className={styles.scrollIndicator}>
+                <div className={styles.mouse}>
+                    <div className={styles.wheel}></div>
+                </div>
+                <div className={styles.arrow}></div>
+            </div>
         </section>
     );
 }
