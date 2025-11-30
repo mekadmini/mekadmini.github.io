@@ -1,11 +1,25 @@
 [
     {
-        "id": 1,
-        "title": "Bachelor of Science: Informatik",
+        "id": 2,
+        "title": "Master of Science: Elitestudiengang Data Science",
         "institute": "Ludwig-Maximilians-Universität",
         "link": "https://www.lmu.de/de/",
-        "year": "2021 - Heute",
-        "description": "Hauptfach Informatik mit Schwerpunkt Data Science und Software Engineering. Nebenfach Statistik.",
+        "year": "2024 - heute",
+        "description": "Hauptfach Data Science.",
+        "imgSrc": "experience/lmu_logo.jpeg",
+        "skills": [
+            "Algorithmen",
+            "Data Science",
+            "Statistik"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Bachelor of Science: Informatik plus Mathematik",
+        "institute": "Ludwig-Maximilians-Universität",
+        "link": "https://www.lmu.de/de/",
+        "year": "2020 - 2024",
+        "description": "Hauptfach Informatik mit Schwerpunkt Maschinelles Lernen. Nebenfach Mathematik.",
         "imgSrc": "experience/lmu_logo.jpeg",
         "skills": [
             "Algorithmen",

@@ -1,11 +1,25 @@
 [
     {
-        "id": 1,
-        "title": "Bachelor of Science: Computer Science",
+        "id": 2,
+        "title": "Master of Science: Elite Program in Data Science",
         "institute": "Ludwig-Maximilians-University",
         "link": "https://www.lmu.de/en/",
-        "year": "2021 - Present",
-        "description": "Major in Computer Science with a focus on Data Science and Software Engineering. Minor in Statistics.",
+        "year": "2024 - Present",
+        "description": "Major in Data Science.",
+        "imgSrc": "experience/lmu_logo.jpeg",
+        "skills": [
+            "Algorithms",
+            "Data Science",
+            "Statistics"
+        ]
+    },
+  {
+        "id": 1,
+        "title": "Bachelor of Science: Computer Science plus Mathematics",
+        "institute": "Ludwig-Maximilians-University",
+        "link": "https://www.lmu.de/en/",
+        "year": "2020 - 2024",
+        "description": "Major in Computer Science with a focus on Machine Learning. Minor in Mathematics.",
         "imgSrc": "experience/lmu_logo.jpeg",
         "skills": [
             "Algorithms",

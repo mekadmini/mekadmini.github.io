@@ -5,7 +5,7 @@
         "institute":"Rohde & Schwarz",
         "link":"https://www.rohde-schwarz.de/de/startseite_48230.html",
         "year":"(06/2024 - present)",
-        "description": "Tutor for the software development course for minor students.",
+        "description": "\n- Automated 3GPP spec updates, reducing manual effort from one month to one week using GitLab CI/CD pipelines.\n- Provisioned build nodes with Ansible, reducing setup time from 2+ hours to fully automated configuration.\n- Migrated legacy Jenkins pipelines and hardware-dependent CI jobs to Docker-based GitLab runners.\n- Enhanced compliance pipelines with automated SBOM generation and publishing. \n- Developed Python tools for CI/CD automation and dependency management across 20+ repositories.",
         "imgSrc": "experience/rohde_schwarz_logo.png",
         "skills": [
             "python",
