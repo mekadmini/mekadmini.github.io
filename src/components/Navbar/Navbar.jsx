@@ -13,12 +13,12 @@ export const Navbar = () => {
     };
 
     useEffect(() => {
+        // Watch all sections and footer
         const sections = document.querySelectorAll("section, footer");
 
-        // Observer for standard scrolling
         const observerOptions = {
             root: null,
-            rootMargin: "-40% 0px -40% 0px", // 20% "Active Strip" in the middle of screen
+            rootMargin: "-45% 0px -45% 0px", // Active zone in middle of screen
             threshold: 0
         };
 
@@ -34,12 +34,11 @@ export const Navbar = () => {
             if (section.id) observer.observe(section);
         });
 
-        // FORCE "Contact" to be active if at the bottom of the page
+        // Force Contact highlight at bottom of page
         const handleScroll = () => {
             const scrollPosition = window.innerHeight + window.scrollY;
             const pageHeight = document.documentElement.scrollHeight;
 
-            // If we are within 50px of the bottom, force 'contact'
             if (scrollPosition >= pageHeight - 50) {
                 setActiveSection("contact");
             }
@@ -67,6 +66,12 @@ export const Navbar = () => {
                     onClick={() => setMenuOpen(!menuOpen)}
                 />
                 <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`} onClick={() => setMenuOpen(false)}>
+                    {/* FIXED: Each link is in its own <li> */}
+                    <li>
+                        <a href="#about" className={activeSection === "about" ? styles.active : ""}>
+                            {t('about')}
+                        </a>
+                    </li>
                     <li>
                         <a href="#projects" className={activeSection === "projects" ? styles.active : ""}>
                             {t('projects')}

@@ -5,14 +5,76 @@
     <link href="/vite.svg" rel="icon" type="image/svg+xml"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-    <title>Mohamed | Portfolio</title>
-    <meta content="Portfolio of Mohamed, a Computer Science student and Software Developer specializing in Data Science and Web Development."
+    <title>Mohamed | Software Developer & Data Scientist</title>
+    <meta content="Mohamed | Software Developer & Data Scientist" name="title"/>
+    <meta content="Portfolio of Mohamed, a master’s student in Data Science and a professional software engineer with a strong background in machine learning and DevOps."
           name="description"/>
+
+    <meta content="website" property="og:type"/>
+    <meta content="https://mekadmini.com/" property="og:url"/>
+    <meta content="Mohamed | Software Developer & Data Scientist" property="og:title"/>
+    <meta content="Portfolio of Mohamed, a master’s student in Data Science and a professional software engineer with a strong background in machine learning and DevOps."
+          property="og:description"/>
+    <meta content="https://mekadmini.com/assets/hero/mohamed.jpg" property="og:image"/>
+
+    <meta content="summary_large_image" property="twitter:card"/>
+    <meta content="https://mekadmini.com/" property="twitter:url"/>
+    <meta content="Mohamed | Software Developer & Data Scientist" property="twitter:title"/>
+    <meta content="Portfolio of Mohamed, a master’s student in Data Science and a professional software engineer with a strong background in machine learning and DevOps."
+          property="twitter:description"/>
+    <meta content="https://mekadmini.com/assets/hero/mohamed.jpg" property="twitter:image"/>
+
     <meta content="#04152d" name="theme-color"/>
 
+    <style>
+        body {
+            margin: 0;
+            background-color: #04152d;
+        }
+
+        /* Centers the loader */
+        .preloader {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #04152d;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        /* The spinner animation */
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-bottom-color: #576cbc; /* Your Primary Color */
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-<div id="root"></div>
+<div id="root">
+    <div class="preloader">
+        <span class="loader"></span>
+    </div>
+</div>
 <script src="/src/main.jsx" type="module"></script>
 </body>
 </html>

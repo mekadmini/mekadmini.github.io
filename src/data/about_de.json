@@ -1,0 +1,12 @@
+{
+    "title": "Über Mich",
+    "description": [
+        "Ich liebe es, Dinge zu bauen und Prozesse zu automatisieren. Meine Leidenschaft liegt in der Anwendung von KI auf reale Probleme, unterstützt durch ein starkes mathematisches Fundament. Ich freue mich auf eine berufliche Laufbahn voller Lernen und ehrgeiziger Projekte.",
+        "Wenn ich nicht gerade programmiere, bin ich gerne aktiv. Man findet mich oft im Fitnessstudio, beim Schwimmen oder beim Zumba. Außerdem bin ich ein großer Feinschmecker, genieße lange Spaziergänge, guten Kaffee und liebe es, auf Reisen neue Leute kennenzulernen.",
+        "Ich glaube, dass Technologie reale Probleme lösen sollte, und ich bin bereit, meinen Teil dazu beizutragen."
+    ],
+    "images": [
+        "about/profile1.jpg",
+        "about/hobby1.jpg"
+    ]
+}

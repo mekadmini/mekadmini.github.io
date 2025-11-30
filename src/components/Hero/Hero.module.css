@@ -42,6 +42,12 @@
     background: linear-gradient(90deg, rgb(181, 14, 222) 70%, rgba(188, 31, 141, 0) 120%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    animation-name: typing;
+    overflow: hidden;
+    text-wrap: nowrap;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
     margin-bottom: 10px;
 }
 
@@ -52,18 +58,17 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     margin-bottom: 20px;
-    min-height: 160px; /* Reserve vertical space so layout doesn't jump */
+    min-height: 160px;
     line-height: 1.1;
 }
 
 .staticText {
-    /* Ensures "I'm a" is visible despite the gradient clip on the parent */
     -webkit-text-fill-color: var(--color-text);
 }
 
 .dynamicText {
     color: var(--color-primary);
-    -webkit-text-fill-color: var(--color-primary); /* Override parent gradient */
+    -webkit-text-fill-color: var(--color-primary);
     display: inline-block;
     animation: slideUp 0.5s ease-out forwards;
 }
@@ -86,32 +91,50 @@
     line-height: 1.5;
 }
 
+/* --- UPDATED IMAGE STYLE --- */
 .heroImg {
-    width: 40%;
-    min-width: 350px;
-    height: auto;
+    width: 400px; /* Fixed width for better control */
+    max-width: 45%; /* Responsive fallback */
+    aspect-ratio: 1; /* Forces a perfect square */
+    object-fit: cover; /* Ensures image fills the square */
     z-index: 1;
+
+    /* Animation */
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    border-radius: 50%;
-    box-shadow: 0 0 50px rgba(87, 108, 188, 0.3);
+
+    /* Styling: Rounded Square + Tilt */
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(87, 108, 188, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Note: 'transform: rotate(5deg)' is handled in the keyframes below
+       so it doesn't get overwritten by the animation */
 }
 
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Updated Floating Animation to include Rotation */
 @keyframes floating {
     0% {
-        transform: translate(0px, 0px);
+        transform: translate(0px, 0px) rotate(5deg);
     }
     50% {
-        transform: translate(0px, 5px);
+        transform: translate(0px, 15px) rotate(5deg);
     }
     100% {
-        transform: translate(0px, -0px);
+        transform: translate(0px, -0px) rotate(5deg);
     }
 }
 
-/* Button Styles */
 .btnContainer {
     display: flex;
     gap: 20px;
@@ -236,7 +259,7 @@
     .title {
         font-size: 50px;
         text-align: center;
-        min-height: auto; /* Remove fixed height on mobile where wrapping is fine */
+        min-height: auto;
     }
 
     .titleTyping {
@@ -254,9 +277,13 @@
     }
 
     .heroImg {
-        width: 60%;
+        width: 70%;
+        max-width: 350px;
         min-width: 250px;
         margin-bottom: 20px;
+        /* On mobile, remove animation and rotation for a clean stack */
+        transform: rotate(0deg);
+        animation: none;
     }
 
     .btnContainer {

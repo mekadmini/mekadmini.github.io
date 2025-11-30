@@ -1,0 +1,12 @@
+{
+    "title": "About Me",
+    "description": [
+        "I have a deep love for building things and automating workflows. My passion lies in applying Artificial Intelligence to real-world problems, backed by a strong foundation in Mathematics. I am eager to kickstart a professional career filled with learning and ambitious projects.",
+        "When I'm not coding, I'm active and outgoing. You can find me at the gym, swimming, or trying out a new Zumba class. I'm also a huge foodie who loves long walks, exploring coffee shops, and meeting new people while traveling.",
+        "I believe technology should be a tool to solve meaningful challenges, and I'm ready to contribute to that mission."
+    ],
+    "images": [
+        "about/profile1.jpg",
+        "about/hobby1.jpg"
+    ]
+}
