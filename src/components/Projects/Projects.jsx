@@ -22,12 +22,16 @@ export const Projects = ({language}) => {
         fetchProjects();
     }, [i18n.language]);
 
-    const filters = ["All", "Python", "React", "Data Science"];
+    const filters = ["All", "Python", "WebDev", "Data Science"];
 
     const filteredProjects = projects.filter((project) => {
         if (filter === "All") return true;
+        if (filter === "WebDev") {
+            const dsSkills = ["react", "fastapi"];
+            return project.skills.some(skill => dsSkills.includes(skill.toLowerCase()));
+        }
         if (filter === "Data Science") {
-            const dsSkills = ["pandas", "keras", "bert", "numpy", "matplotlib", "tensorflow"];
+            const dsSkills = ["pandas", "keras", "bert", "numpy", "matplotlib", "tensorflow", "openai api"];
             return project.skills.some(skill => dsSkills.includes(skill.toLowerCase()));
         }
         return project.skills.some(skill => skill.toLowerCase() === filter.toLowerCase());

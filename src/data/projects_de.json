@@ -34,7 +34,7 @@
         "skills": [
             "python",
             "django",
-            "gpt-api",
+            "OpenAI API",
             "git"
         ],
         "link": "https://parkmylatex.xn--i-zfa.at/",
@@ -83,5 +83,19 @@
         ],
         "link": "",
         "source": ""
-    }
+    },
+    {
+        "id": 7,
+        "title": "SketchTale",
+        "description": "Sketchtale ist eine kreative Storytelling-Plattform, die es Nutzern ermöglicht, zu schreiben, zu skizzieren und komplexe, KI-gestützte Erzählungen zu generieren. Ob du von Grund auf neu zeichnest, aus der Fantasie schreibst oder beides kombinierst – Sketchtale hilft dir, deine Ideen zum Leben zu erwecken.",
+        "imgSrc": "projects/sketchtale.png",
+        "skills": [
+            "python",
+            "git",
+            "OpenAI API",
+            "FastAPI"
+        ],
+        "link": "https://www.youtube.com/watch?v=GMfKq3jtG64",
+        "source": "https://github.com/VisualStoriesHCA/wiki/wiki"
+  }
 ]
