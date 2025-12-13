@@ -142,10 +142,12 @@
     .container {
         margin: 30px 5%;
     }
+
     .projectsGrid {
         flex-direction: column;
         align-items: center;
     }
+
     .card {
         max-width: 100%;
     }
