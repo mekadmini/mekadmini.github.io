@@ -24,7 +24,7 @@
             "git"
         ],
         "link": "",
-        "source": ""
+        "source": "https://github.com/mekadmini/improg2L"
     },
     {
         "id": 3,
@@ -34,7 +34,7 @@
         "skills": [
             "python",
             "django",
-            "gpt-api",
+            "OpenAI API",
             "git"
         ],
         "link": "https://parkmylatex.xn--i-zfa.at/",
@@ -83,5 +83,19 @@
         ],
         "link": "",
         "source": ""
+    },
+    {
+        "id": 7,
+        "title": "SketchTale",
+        "description": "Sketchtale is a creative storytelling platform that allows users to write, sketch, and generate rich, AI-powered narratives. Whether you're drawing from scratch, writing from imagination, or combining both — Sketchtale helps you bring your ideas to life.",
+        "imgSrc": "projects/sketchtale.png",
+        "skills": [
+          "python",
+          "git",
+          "OpenAI API",
+          "FastAPI"
+        ],
+        "link": "https://www.youtube.com/watch?v=GMfKq3jtG64",
+        "source": "https://github.com/VisualStoriesHCA/wiki/wiki"
     }
 ]
