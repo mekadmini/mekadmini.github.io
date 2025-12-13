@@ -54,22 +54,6 @@
         "source": ""
     },
     {
-        "id": 5,
-        "title": "Meine Portfolio-Webseite",
-        "description": "diese Portfolio-Webseite :)",
-        "imgSrc": "projects/portfolio.png",
-        "skills": [
-            "vite",
-            "react",
-            "html",
-            "css",
-            "javascript",
-            "git"
-        ],
-        "link": "https://mekadmini.tech",
-        "source": "https://github.com/medislamm123/medislamm123.github.io"
-    },
-    {
         "id": 6,
         "title": "Bachelorarbeit",
         "description": "das Thema bezieht sich auf Conformal Prediction",
