@@ -21,7 +21,6 @@
     left: -100px;
     border-radius: 764px;
     background: rgba(25, 55, 109, 0.4);
-    filter: blur(100px);
     z-index: 0;
     animation: moveTop 15s infinite alternate ease-in-out;
 }
@@ -36,7 +35,6 @@
     right: -100px;
     border-radius: 764px;
     background: rgba(87, 108, 188, 0.4);
-    filter: blur(100px);
     z-index: 0;
     animation: moveBottom 18s infinite alternate ease-in-out;
 }
