@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react"
-import styles from "./Projects.module.css"
+import React, {useEffect, useState} from "react";
+import styles from "./Projects.module.css";
 import {useTranslation} from 'react-i18next';
-import {getImageUrl} from "../../utils"
+import {getImageUrl} from "../../utils";
 
-export const Projects = ({language}) => {
+export const Projects = () => {
     const {t, i18n} = useTranslation();
     const [projects, setProjects] = useState([]);
     const [filter, setFilter] = useState("All");
@@ -22,23 +22,16 @@ export const Projects = ({language}) => {
         fetchProjects();
     }, [i18n.language]);
 
-    const filters = ["All", "Python", "WebDev", "Data Science"];
+    // Categories must match the 'category' strings in your JSON files
+    const filters = ["All", "WebDev", "Data Science"];
 
     const filteredProjects = projects.filter((project) => {
         if (filter === "All") return true;
-        if (filter === "WebDev") {
-            const dsSkills = ["react", "fastapi"];
-            return project.skills.some(skill => dsSkills.includes(skill.toLowerCase()));
-        }
-        if (filter === "Data Science") {
-            const dsSkills = ["pandas", "keras", "bert", "numpy", "matplotlib", "tensorflow", "openai api"];
-            return project.skills.some(skill => dsSkills.includes(skill.toLowerCase()));
-        }
-        return project.skills.some(skill => skill.toLowerCase() === filter.toLowerCase());
+        return project.category === filter;
     });
 
     return (
-        <section className={styles.container} id="projects"> {/* Moved ID here */}
+        <section className={styles.container} id="projects">
             <h2 className={styles.title}>{t('projects')}</h2>
 
             <div className={styles.filterContainer}>
@@ -57,8 +50,11 @@ export const Projects = ({language}) => {
                 {filteredProjects.map((project, id) => {
                     return (
                         <div key={id} className={styles.card}>
-                            <img src={getImageUrl(project.imgSrc)} alt={`Image of ${project.title}`}
-                                 className={styles.imgSrc}></img>
+                            <img
+                                src={getImageUrl(project.imgSrc)}
+                                alt={`Image of ${project.title}`}
+                                className={styles.imgSrc}
+                            />
                             <h3 className={styles.projectTitle}>{project.title}</h3>
                             <p className={styles.projectDescription}>{project.description}</p>
                             <ul className={styles.skills}>
@@ -67,15 +63,23 @@ export const Projects = ({language}) => {
                                 ))}
                             </ul>
                             <div className={styles.linksContainer}>
-                                {project.link && <a href={project.link} className={styles.linkBtn} target="_blank"
-                                                    rel="noopener noreferrer">{t('link')}</a>}
-                                {project.source && <a href={project.source} className={styles.linkBtn} target="_blank"
-                                                      rel="noopener noreferrer">{t('source')}</a>}
+                                {project.link && (
+                                    <a href={project.link} className={styles.linkBtn} target="_blank"
+                                       rel="noopener noreferrer">
+                                        {t('link')}
+                                    </a>
+                                )}
+                                {project.source && (
+                                    <a href={project.source} className={styles.linkBtn} target="_blank"
+                                       rel="noopener noreferrer">
+                                        {t('source')}
+                                    </a>
+                                )}
                             </div>
                         </div>
                     );
                 })}
             </div>
         </section>
-    )
-}
+    );
+};

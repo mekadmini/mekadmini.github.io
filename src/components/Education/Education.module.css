@@ -4,7 +4,6 @@
     margin-top: 76px;
     margin-left: 10%;
     margin-right: 10%;
-    /* Keep a large gap here to separate it from Contact */
     margin-bottom: 150px;
     color: var(--color-text);
     display: flex;
@@ -30,54 +29,44 @@
 }
 
 .timelineItem {
-    background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0.4) 100%);
-    border-radius: 20px;
-    padding: 25px;
+    background: var(--color-card-bg);
+    border-radius: 12px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
-    max-width: 400px;
-    min-height: 350px;
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    max-width: 450px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .timelineItem:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0.7) 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .cardHeader {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    width: 100%;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    width: 100%;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .imgSrc {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     margin-bottom: 15px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 .titleText {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 5px;
     color: var(--color-text);
@@ -86,25 +75,20 @@
 .institute {
     font-size: 16px;
     font-weight: 400;
-    color: #cccccc;
+    color: var(--color-text-secondary);
     margin-bottom: 8px;
 }
 
 .year {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-primary);
-    background: rgba(87, 108, 188, 0.1);
-    padding: 4px 12px;
-    border-radius: 12px;
 }
 
 .timelineContent {
     font-size: 16px;
     line-height: 1.6;
-    color: #efefef;
-    width: 100%;
-    text-align: center;
+    color: var(--color-text-secondary);
     font-family: var(--font-roboto);
 }
 
@@ -112,9 +96,7 @@
     .container {
         margin-left: 5%;
         margin-right: 5%;
-        margin-bottom: 100px;
     }
-
     .timelineItem {
         max-width: 100%;
     }

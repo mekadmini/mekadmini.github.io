@@ -2,84 +2,61 @@
     {
         "id": 1,
         "title": "Spam-Klassifikator",
+        "category": "Data Science",
         "description": "Basierend auf dem BERT-Sprachmodell für die Vorlesung Advanced Analytics in Machine Learning.",
         "imgSrc": "projects/spam_detector.png",
-        "skills": [
-            "python",
-            "bert",
-            "keras",
-            "pandas",
-            "git"
-        ],
+        "skills": ["python", "bert", "keras", "pandas"],
         "link": "",
         "source": "https://gitlab.com/medislamm123/aaml-project"
     },
     {
         "id": 2,
         "title": "ImProg 2L compiler",
-        "description": "Ein Compiler für eine prologähnliche Programmiersprache für das Softwareentwicklungspracktikum",
+        "category": "Other",
+        "description": "Ein Compiler für eine prologähnliche Programmiersprache für das Softwareentwicklungspracktikum.",
         "imgSrc": "projects/compiler.png",
-        "skills": [
-            "haskell",
-            "git"
-        ],
+        "skills": ["haskell"],
         "link": "",
         "source": "https://github.com/mekadmini/improg2L"
     },
     {
         "id": 3,
         "title": "ParkMyLatex",
-        "description": "",
+        "category": "WebDev",
+        "description": "Eine Full-Stack Webanwendung zur Verwaltung von LaTeX-Snippets.",
         "imgSrc": "projects/parkmylatex.png",
-        "skills": [
-            "python",
-            "django",
-            "OpenAI API",
-            "git"
-        ],
+        "skills": ["python", "django", "OpenAI API"],
         "link": "https://parkmylatex.xn--i-zfa.at/",
         "source": "https://github.com/medislamm123/park-my-latex-server"
     },
     {
         "id": 4,
         "title": "Numerik (Notizen)",
-        "description": "Diese inoffizielle Webseite dient als Startpunkt für die Prüfungsvorbereitung in Numerik an der LMU München. Sie bietet eine geordnete Liste der wichtigsten Themen der Vorlesung sowie die wichtigsten Definitionen und Beispiele, um den Studierenden einen schnellen Überblick zu ermöglichen und ihre Vorbereitung zu erleichtern.",
+        "category": "WebDev",
+        "description": "Inoffizielle Webseite zur Prüfungsvorbereitung in Numerik an der LMU München.",
         "imgSrc": "projects/numerik.png",
-        "skills": [
-            "markdown",
-            "latex",
-            "git"
-        ],
+        "skills": ["markdown", "latex"],
         "link": "https://mekadmini.tech/numerik",
         "source": ""
     },
     {
         "id": 6,
         "title": "Bachelorarbeit",
-        "description": "das Thema bezieht sich auf Conformal Prediction",
+        "category": "Data Science",
+        "description": "Das Thema bezieht sich auf Conformal Prediction für Preference Learning.",
         "imgSrc": "projects/bachelor_thesis.png",
-        "skills": [
-            "python",
-            "pandas",
-            "numpy",
-            "matplotlib",
-            "git"
-        ],
+        "skills": ["python", "pandas", "numpy", "matplotlib"],
         "link": "",
         "source": ""
     },
     {
         "id": 7,
         "title": "SketchTale",
+        "category": "WebDev",
         "description": "Sketchtale ist eine kreative Storytelling-Plattform, die es Nutzern ermöglicht, zu schreiben, zu skizzieren und komplexe, KI-gestützte Erzählungen zu generieren. Ob du von Grund auf neu zeichnest, aus der Fantasie schreibst oder beides kombinierst – Sketchtale hilft dir, deine Ideen zum Leben zu erwecken.",
         "imgSrc": "projects/sketchtale.png",
-        "skills": [
-            "python",
-            "git",
-            "OpenAI API",
-            "FastAPI"
-        ],
+        "skills": ["python", "OpenAI API", "FastAPI"],
         "link": "https://www.youtube.com/watch?v=GMfKq3jtG64",
         "source": "https://github.com/VisualStoriesHCA/wiki/wiki"
-  }
+    }
 ]

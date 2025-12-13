@@ -2,83 +2,60 @@
     {
         "id": 1,
         "title": "SPAM Classifier",
-        "description": "based on the BERT language model for the lecture Advanced Analytics in Machine Learning.",
+        "category": "Data Science",
+        "description": "A BERT-based language model for detecting spam emails, developed for the Advanced Analytics in Machine Learning lecture.",
         "imgSrc": "projects/spam_detector.png",
-        "skills": [
-            "python",
-            "bert",
-            "keras",
-            "pandas",
-            "git"
-        ],
+        "skills": ["python", "bert", "keras", "pandas"],
         "link": "",
         "source": "https://gitlab.com/medislamm123/aaml-project"
     },
     {
         "id": 2,
         "title": "ImProg 2L compiler",
-        "description": "a compiler for a Prolog-like programming language using Haskell for the software development practical",
+        "category": "Other",
+        "description": "A compiler for a Prolog-like programming language built with Haskell for the software development practical.",
         "imgSrc": "projects/compiler.png",
-        "skills": [
-            "haskell",
-            "git"
-        ],
+        "skills": ["haskell"],
         "link": "",
         "source": "https://github.com/mekadmini/improg2L"
     },
     {
         "id": 3,
         "title": "ParkMyLatex",
-        "description": "",
+        "category": "WebDev",
+        "description": "A full-stack web application for managing LaTeX snippets.",
         "imgSrc": "projects/parkmylatex.png",
-        "skills": [
-            "python",
-            "django",
-            "OpenAI API",
-            "git"
-        ],
+        "skills": ["python", "django", "OpenAI API"],
         "link": "https://parkmylatex.xn--i-zfa.at/",
         "source": "https://github.com/medislamm123/park-my-latex-server"
     },
     {
         "id": 4,
-        "title": "Numerical analysis notes",
-        "description": "Only available in german",
+        "title": "Numerical Analysis Notes",
+        "category": "WebDev",
+        "description": "Unofficial exam preparation site for Numerical Analysis at LMU Munich. (German only)",
         "imgSrc": "projects/numerik.png",
-        "skills": [
-            "markdown",
-            "latex",
-            "git"
-        ],
+        "skills": ["markdown", "latex"],
         "link": "https://mekadmini.tech/numerik",
         "source": ""
     },
     {
         "id": 6,
-        "title": "Bachelor thesis",
-        "description": "My topic is related to conformal prediction",
+        "title": "Bachelor Thesis",
+        "category": "Data Science",
+        "description": "Research on Conformal Prediction for Preference Learning (Uncertainty Quantification).",
         "imgSrc": "projects/bachelor_thesis.png",
-        "skills": [
-            "python",
-            "pandas",
-            "numpy",
-            "matplotlib",
-            "git"
-        ],
+        "skills": ["python", "pandas", "numpy", "matplotlib"],
         "link": "",
         "source": ""
     },
     {
         "id": 7,
         "title": "SketchTale",
+        "category": "WebDev",
         "description": "Sketchtale is a creative storytelling platform that allows users to write, sketch, and generate rich, AI-powered narratives. Whether you're drawing from scratch, writing from imagination, or combining both — Sketchtale helps you bring your ideas to life.",
         "imgSrc": "projects/sketchtale.png",
-        "skills": [
-          "python",
-          "git",
-          "OpenAI API",
-          "FastAPI"
-        ],
+        "skills": ["python", "OpenAI API", "FastAPI"],
         "link": "https://www.youtube.com/watch?v=GMfKq3jtG64",
         "source": "https://github.com/VisualStoriesHCA/wiki/wiki"
     }

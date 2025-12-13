@@ -2,10 +2,7 @@
 
 .container {
     color: var(--color-text);
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 50px 10%;
     padding: 50px;
     display: flex;
     flex-direction: row;
@@ -13,26 +10,23 @@
     align-items: center;
     gap: 40px;
 
-    /* Glassmorphism Card */
-    background: rgba(4, 21, 45, 0.5); /* Semi-transparent dark blue */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 30px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--color-card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-border);
 }
 
 .text h2 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-bottom: 15px;
 }
 
 .text p {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
-    color: #cccccc;
+    color: var(--color-text-secondary);
 }
 
 .links {
@@ -47,18 +41,12 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 12px 25px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
+    transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--color-primary);
-    transform: translateX(10px); /* Slide effect */
+    transform: translateX(5px);
 }
 
 .link a {
@@ -66,13 +54,13 @@
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
-    letter-spacing: 1px;
 }
 
 .link img {
-    width: 35px;
-    height: 35px;
-    filter: brightness(0) invert(1); /* Forces icons to be white if they aren't already */
+    width: 30px;
+    height: 30px;
+    /* Ensure icons are visible on dark bg */
+    filter: brightness(0) invert(1);
 }
 
 @media screen and (max-width: 830px) {
@@ -81,12 +69,8 @@
         text-align: center;
         padding: 30px;
     }
-
     .links {
         width: 100%;
-    }
-
-    .link {
-        justify-content: center;
+        align-items: center;
     }
 }
