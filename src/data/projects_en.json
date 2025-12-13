@@ -71,7 +71,7 @@
     },
     {
         "id": 6,
-        "title": "Bechelor thesis",
+        "title": "Bachelor thesis",
         "description": "My topic is related to conformal prediction",
         "imgSrc": "projects/bachelor_thesis.png",
         "skills": [

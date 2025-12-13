@@ -71,7 +71,7 @@
     },
     {
         "id": 6,
-        "title": "Bechelorarbeit",
+        "title": "Bachelorarbeit",
         "description": "das Thema bezieht sich auf Conformal Prediction",
         "imgSrc": "projects/bachelor_thesis.png",
         "skills": [
