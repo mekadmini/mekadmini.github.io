@@ -36,103 +36,41 @@
     flex: 1;
 }
 
-.titleTyping {
-    font-size: 60px;
-    font-weight: 900;
-    background: linear-gradient(90deg, rgb(181, 14, 222) 70%, rgba(188, 31, 141, 0) 120%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    animation-name: typing;
-    overflow: hidden;
-    text-wrap: nowrap;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-bottom: 10px;
-}
-
 .title {
     font-size: 76px;
     font-weight: 900;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 120%);
+    margin-bottom: 10px;
+    line-height: 1.1;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0.5) 120%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    margin-bottom: 20px;
-    min-height: 160px;
-    line-height: 1.1;
 }
 
-.staticText {
-    -webkit-text-fill-color: var(--color-text);
-}
-
-.dynamicText {
+.subtitle {
+    font-size: 40px;
+    font-weight: 700;
     color: var(--color-primary);
-    -webkit-text-fill-color: var(--color-primary);
-    display: inline-block;
-    animation: slideUp 0.5s ease-out forwards;
-}
-
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    margin-bottom: 20px;
+    font-family: var(--font-roboto);
 }
 
 .description {
-    font-size: 30px;
+    font-size: 24px;
     font-family: var(--font-roboto);
     margin-bottom: 40px;
-    line-height: 1.5;
+    line-height: 1.6;
+    max-width: 600px;
 }
 
-/* --- UPDATED IMAGE STYLE --- */
 .heroImg {
-    width: 400px; /* Fixed width for better control */
-    max-width: 45%; /* Responsive fallback */
-    aspect-ratio: 1; /* Forces a perfect square */
-    object-fit: cover; /* Ensures image fills the square */
+    width: 400px;
+    max-width: 45%;
+    aspect-ratio: 1;
+    object-fit: cover;
     z-index: 1;
-
-    /* Animation */
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-
-    /* Styling: Rounded Square + Tilt */
-    border-radius: 30px;
+    border-radius: 50%; /* Changed to circle for a cleaner professional look */
     box-shadow: 0 20px 50px rgba(87, 108, 188, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    /* Note: 'transform: rotate(5deg)' is handled in the keyframes below
-       so it doesn't get overwritten by the animation */
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-/* Updated Floating Animation to include Rotation */
-@keyframes floating {
-    0% {
-        transform: translate(0px, 0px) rotate(5deg);
-    }
-    50% {
-        transform: translate(0px, 15px) rotate(5deg);
-    }
-    100% {
-        transform: translate(0px, -0px) rotate(5deg);
-    }
+    border: 4px solid rgba(255, 255, 255, 0.1);
 }
 
 .btnContainer {
@@ -180,74 +118,6 @@
     color: var(--color-text);
 }
 
-/* Scroll Indicator */
-.scrollIndicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    opacity: 0.8;
-}
-
-.mouse {
-    width: 26px;
-    height: 40px;
-    border: 2px solid white;
-    border-radius: 20px;
-    position: relative;
-}
-
-.wheel {
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 6px;
-    background: white;
-    border-radius: 2px;
-    animation: scrollWheel 2s infinite;
-}
-
-.arrow {
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-    transform: rotate(45deg);
-    animation: scrollArrow 2s infinite;
-    animation-delay: 0.2s;
-}
-
-@keyframes scrollWheel {
-    0% {
-        top: 6px;
-        opacity: 1;
-    }
-    100% {
-        top: 20px;
-        opacity: 0;
-    }
-}
-
-@keyframes scrollArrow {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    100% {
-        opacity: 0;
-        transform: rotate(45deg) translate(10px, 10px);
-    }
-}
-
 @media screen and (max-width: 1150px) {
     .container {
         flex-direction: column-reverse;
@@ -259,17 +129,16 @@
     .title {
         font-size: 50px;
         text-align: center;
-        min-height: auto;
     }
 
-    .titleTyping {
-        font-size: 40px;
+    .subtitle {
+        font-size: 30px;
         text-align: center;
     }
 
     .description {
         text-align: center;
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .content {
@@ -278,12 +147,8 @@
 
     .heroImg {
         width: 70%;
-        max-width: 350px;
-        min-width: 250px;
+        max-width: 300px;
         margin-bottom: 20px;
-        /* On mobile, remove animation and rotation for a clean stack */
-        transform: rotate(0deg);
-        animation: none;
     }
 
     .btnContainer {
@@ -295,9 +160,5 @@
     .contactBtn, .resumeBtn {
         width: 80%;
         text-align: center;
-    }
-
-    .scrollIndicator {
-        display: none;
     }
 }
