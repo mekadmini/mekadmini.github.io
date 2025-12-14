@@ -1,6 +1,16 @@
 [
     {
         "id": 1,
+        "title": "SketchTale",
+        "category": "WebDev",
+        "description": "Sketchtale is a creative storytelling platform that allows users to write, sketch, and generate rich, AI-powered narratives. Whether you're drawing from scratch, writing from imagination, or combining both — Sketchtale helps you bring your ideas to life.",
+        "imgSrc": "projects/sketchtale.png",
+        "skills": ["python", "OpenAI API", "FastAPI"],
+        "video": "https://www.youtube.com/watch?v=GMfKq3jtG64",
+        "source": "https://github.com/VisualStoriesHCA/wiki/wiki"
+    },
+    {
+        "id": 2,
         "title": "SPAM Classifier",
         "category": "Data Science",
         "description": "A BERT-based language model for detecting spam emails, developed for the Advanced Analytics in Machine Learning lecture.",
@@ -10,7 +20,7 @@
         "source": "https://gitlab.com/medislamm123/aaml-project"
     },
     {
-        "id": 2,
+        "id": 3,
         "title": "ImProg 2L compiler",
         "category": "Other",
         "description": "A compiler for a Prolog-like programming language built with Haskell for the software development practical.",
@@ -20,7 +30,7 @@
         "source": "https://github.com/mekadmini/improg2L"
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "ParkMyLatex",
         "category": "WebDev",
         "description": "A full-stack web application for managing LaTeX snippets.",
@@ -30,14 +40,13 @@
         "source": "https://github.com/medislamm123/park-my-latex-server"
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Numerical Analysis Notes",
         "category": "WebDev",
         "description": "Unofficial exam preparation site for Numerical Analysis at LMU Munich. (German only)",
         "imgSrc": "projects/numerik.png",
         "skills": ["markdown", "latex"],
-        "link": "https://mekadmini.tech/numerik",
-        "source": ""
+        "link": "https://mekadmini.tech/numerik"
     },
     {
         "id": 6,
@@ -45,18 +54,6 @@
         "category": "Data Science",
         "description": "Research on Conformal Prediction for Preference Learning (Uncertainty Quantification).",
         "imgSrc": "projects/bachelor_thesis.png",
-        "skills": ["python", "pandas", "numpy", "matplotlib"],
-        "link": "",
-        "source": ""
-    },
-    {
-        "id": 7,
-        "title": "SketchTale",
-        "category": "WebDev",
-        "description": "Sketchtale is a creative storytelling platform that allows users to write, sketch, and generate rich, AI-powered narratives. Whether you're drawing from scratch, writing from imagination, or combining both — Sketchtale helps you bring your ideas to life.",
-        "imgSrc": "projects/sketchtale.png",
-        "skills": ["python", "OpenAI API", "FastAPI"],
-        "link": "https://www.youtube.com/watch?v=GMfKq3jtG64",
-        "source": "https://github.com/VisualStoriesHCA/wiki/wiki"
+        "skills": ["python", "pandas", "numpy", "matplotlib"]
     }
 ]

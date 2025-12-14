@@ -75,6 +75,18 @@ export const Projects = () => {
                                         {t('source')}
                                     </a>
                                 )}
+                                {project.video && (
+                                    <a href={project.video} className={styles.linkBtn} target="_blank"
+                                       rel="noopener noreferrer">
+                                        {t('video')}
+                                    </a>
+                                )}
+                                {project.report && (
+                                    <a href={project.report} className={styles.linkBtn} target="_blank"
+                                       rel="noopener noreferrer">
+                                        {t('report')}
+                                    </a>
+                                )}
                             </div>
                         </div>
                     );

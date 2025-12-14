@@ -1,26 +1,34 @@
 [
     {
         "id": 1,
+        "title": "SketchTale",
+        "category": "WebDev",
+        "description": "Sketchtale ist eine kreative Storytelling-Plattform, die es Nutzern ermöglicht, zu schreiben, zu skizzieren und komplexe, KI-gestützte Erzählungen zu generieren. Ob du von Grund auf neu zeichnest, aus der Fantasie schreibst oder beides kombinierst – Sketchtale hilft dir, deine Ideen zum Leben zu erwecken.",
+        "imgSrc": "projects/sketchtale.png",
+        "skills": ["python", "OpenAI API", "FastAPI"],
+        "video": "https://www.youtube.com/watch?v=GMfKq3jtG64",
+        "source": "https://github.com/VisualStoriesHCA/wiki/wiki"
+    },
+    {
+        "id": 2,
         "title": "Spam-Klassifikator",
         "category": "Data Science",
         "description": "Basierend auf dem BERT-Sprachmodell für die Vorlesung Advanced Analytics in Machine Learning.",
         "imgSrc": "projects/spam_detector.png",
         "skills": ["python", "bert", "keras", "pandas"],
-        "link": "",
         "source": "https://gitlab.com/medislamm123/aaml-project"
     },
     {
-        "id": 2,
+        "id": 3,
         "title": "ImProg 2L compiler",
         "category": "Other",
         "description": "Ein Compiler für eine prologähnliche Programmiersprache für das Softwareentwicklungspracktikum.",
         "imgSrc": "projects/compiler.png",
         "skills": ["haskell"],
-        "link": "",
         "source": "https://github.com/mekadmini/improg2L"
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "ParkMyLatex",
         "category": "WebDev",
         "description": "Eine Full-Stack Webanwendung zur Verwaltung von LaTeX-Snippets.",
@@ -30,14 +38,13 @@
         "source": "https://github.com/medislamm123/park-my-latex-server"
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Numerik (Notizen)",
         "category": "WebDev",
         "description": "Inoffizielle Webseite zur Prüfungsvorbereitung in Numerik an der LMU München.",
         "imgSrc": "projects/numerik.png",
         "skills": ["markdown", "latex"],
-        "link": "https://mekadmini.tech/numerik",
-        "source": ""
+        "link": "https://mekadmini.tech/numerik"
     },
     {
         "id": 6,
@@ -45,18 +52,6 @@
         "category": "Data Science",
         "description": "Das Thema bezieht sich auf Conformal Prediction für Preference Learning.",
         "imgSrc": "projects/bachelor_thesis.png",
-        "skills": ["python", "pandas", "numpy", "matplotlib"],
-        "link": "",
-        "source": ""
-    },
-    {
-        "id": 7,
-        "title": "SketchTale",
-        "category": "WebDev",
-        "description": "Sketchtale ist eine kreative Storytelling-Plattform, die es Nutzern ermöglicht, zu schreiben, zu skizzieren und komplexe, KI-gestützte Erzählungen zu generieren. Ob du von Grund auf neu zeichnest, aus der Fantasie schreibst oder beides kombinierst – Sketchtale hilft dir, deine Ideen zum Leben zu erwecken.",
-        "imgSrc": "projects/sketchtale.png",
-        "skills": ["python", "OpenAI API", "FastAPI"],
-        "link": "https://www.youtube.com/watch?v=GMfKq3jtG64",
-        "source": "https://github.com/VisualStoriesHCA/wiki/wiki"
+        "skills": ["python", "pandas", "numpy", "matplotlib"]
     }
 ]
