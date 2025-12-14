@@ -1,31 +1,20 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import styles from "./Projects.module.css";
 import {useTranslation} from 'react-i18next';
 import {getImageUrl} from "../../utils";
 
+import projectsEn from "../../data/projects_en.json";
+import projectsDe from "../../data/projects_de.json";
+
 export const Projects = () => {
     const {t, i18n} = useTranslation();
-    const [projects, setProjects] = useState([]);
     const [filter, setFilter] = useState("All");
 
-    useEffect(() => {
-        const fetchProjects = async () => {
-            try {
-                const projectsModule = await import(`../../data/projects_${i18n.language}.json`);
-                setProjects(projectsModule.default);
-            } catch (error) {
-                console.error('Error fetching projects:', error);
-                setProjects([]);
-            }
-        };
+    const projectsData = i18n.language === 'de' ? projectsDe : projectsEn;
 
-        fetchProjects();
-    }, [i18n.language]);
-
-    // Categories must match the 'category' strings in your JSON files
     const filters = ["All", "WebDev", "Data Science"];
 
-    const filteredProjects = projects.filter((project) => {
+    const filteredProjects = projectsData.filter((project) => {
         if (filter === "All") return true;
         return project.category === filter;
     });

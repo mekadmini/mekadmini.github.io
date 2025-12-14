@@ -1,28 +1,18 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import styles from "./Education.module.css";
 import {useTranslation} from 'react-i18next';
 import {getImageUrl} from "../../utils";
 
+import educationEn from "../../data/education_en.json";
+import educationDe from "../../data/education_de.json";
+
 export const Education = () => {
     const {t, i18n} = useTranslation();
-    const [education, setEducation] = useState([]);
 
-    useEffect(() => {
-        const fetchEducation = async () => {
-            try {
-                const educationModule = await import(`../../data/education_${i18n.language}.json`);
-                setEducation(educationModule.default);
-            } catch (error) {
-                console.error('Error fetching education:', error);
-                setEducation([]);
-            }
-        };
-
-        fetchEducation();
-    }, [i18n.language]);
+    const education = i18n.language === 'de' ? educationDe : educationEn;
 
     return (
-        <section className={styles.container} id="education"> {/* Moved ID here */}
+        <section className={styles.container} id="education">
             <h2 className={styles.title}>{t('education')}</h2>
             <div className={styles.timeline}>
                 {education.map((edu, id) => {

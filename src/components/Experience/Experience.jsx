@@ -1,30 +1,20 @@
-import React, {useEffect, useState} from "react"
-import styles from "./Experience.module.css"
+import React from "react";
+import styles from "./Experience.module.css";
 import {useTranslation} from 'react-i18next';
-import {getImageUrl} from "../../utils"
+import {getImageUrl} from "../../utils";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-export const Experience = ({language}) => {
+import experienceEn from "../../data/experience_en.json";
+import experienceDe from "../../data/experience_de.json";
+
+export const Experience = () => {
     const {t, i18n} = useTranslation();
-    const [experience, setExperience] = useState([]);
 
-    useEffect(() => {
-        const fetchExperience = async () => {
-            try {
-                const experienceModule = await import(`../../data/experience_${i18n.language}.json`);
-                setExperience(experienceModule.default);
-            } catch (error) {
-                console.error('Error fetching experiences:', error);
-                setExperience([]);
-            }
-        };
-
-        fetchExperience();
-    }, [i18n.language]);
+    const experience = i18n.language === 'de' ? experienceDe : experienceEn;
 
     return (
-        <section className={styles.container} id="experience"> {/* Moved ID here */}
+        <section className={styles.container} id="experience">
             <h2 className={styles.title}>{t('experience')}</h2>
             <div className={styles.timeline}>
                 {experience.map((myExperience, id) => {
