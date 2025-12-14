@@ -1,14 +1,30 @@
 {
-  "languages": [
-    "Python", "C++", "Java", "Haskell", "JavaScript", "TypeScript", "SQL", "HTML5", "CSS3", "LaTeX"
+  "Languages": [
+    "Python (Pandas, NumPy, PyTorch)",
+    "Java",
+    "C++",
+    "SQL",
+    "Haskell",
+    "TypeScript / JavaScript"
   ],
-  "frameworks": [
-    "React", "Node.js", "TensorFlow", "Keras"
+  "DevOps & MLOps": [
+    "GitLab CI/CD & GitHub Actions",
+    "Docker & Containerization",
+    "Ansible (IaC)",
+    "Jenkins Migration",
+    "Linux Administration"
   ],
-  "tools": [
-    "Git", "Docker", "Linux"
+  "Machine Learning": [
+    "TensorFlow & Keras",
+    "Scikit-learn",
+    "Generative AI (OpenAI API)",
+    "Conformal Prediction",
+    "Uncertainty Quantification"
   ],
-  "concepts": [
-    "Machine Learning", "Data Science"
+  "Web Engineering": [
+    "React & Vite",
+    "FastAPI",
+    "Node.js",
+    "RESTful Architecture"
   ]
 }

@@ -17,8 +17,8 @@
     "source": "Quelle",
     "video": "Video",
     "report": "Bericht",
-    "languages": "Sprachen",
-    "frameworks": "Frameworks & Bibliotheken",
-    "tools": "Tools & Plattformen",
-    "concepts": "Kernkompetenzen"
+    "Languages": "Sprachen",
+    "DevOps & MLOps": "DevOps & MLOps",
+    "Machine Learning": "Maschinelles Lernen",
+    "Web Engineering": "Web-Engineering"
 }

@@ -17,8 +17,8 @@
     "source":"Source",
     "video": "Video",
     "report": "Report",
-    "languages": "Languages",
-    "frameworks": "Frameworks & Libraries",
-    "tools": "Tools & Platforms",
-    "concepts": "Core Concepts"
+    "Languages": "Languages",
+    "DevOps & MLOps": "DevOps & MLOps",
+    "Machine Learning": "Machine Learning",
+    "Web Engineering": "Web Engineering"
 }
