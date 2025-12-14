@@ -7,7 +7,8 @@
         "imgSrc": "projects/sketchtale.png",
         "skills": ["python", "OpenAI API", "FastAPI"],
         "video": "https://www.youtube.com/watch?v=GMfKq3jtG64",
-        "source": "https://github.com/VisualStoriesHCA/wiki/wiki"
+        "source": "https://github.com/VisualStoriesHCA/wiki/wiki",
+        "report": "/Sketchtale.pdf"
     },
     {
         "id": 2,
@@ -16,7 +17,6 @@
         "description": "A BERT-based language model for detecting spam emails, developed for the Advanced Analytics in Machine Learning lecture.",
         "imgSrc": "projects/spam_detector.png",
         "skills": ["python", "bert", "keras", "pandas"],
-        "link": "",
         "source": "https://gitlab.com/mekadmini/aaml-project"
     },
     {
@@ -26,7 +26,6 @@
         "description": "A compiler for a Prolog-like programming language built with Haskell for the software development practical.",
         "imgSrc": "projects/compiler.png",
         "skills": ["haskell"],
-        "link": "",
         "source": "https://github.com/mekadmini/improg2L"
     },
     {

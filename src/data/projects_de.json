@@ -7,7 +7,8 @@
         "imgSrc": "projects/sketchtale.png",
         "skills": ["python", "OpenAI API", "FastAPI"],
         "video": "https://www.youtube.com/watch?v=GMfKq3jtG64",
-        "source": "https://github.com/VisualStoriesHCA/wiki/wiki"
+        "source": "https://github.com/VisualStoriesHCA/wiki/wiki",
+        "report": "/Sketchtale.pdf"
     },
     {
         "id": 2,
