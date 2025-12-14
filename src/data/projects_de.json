@@ -16,7 +16,7 @@
         "description": "Basierend auf dem BERT-Sprachmodell für die Vorlesung Advanced Analytics in Machine Learning.",
         "imgSrc": "projects/spam_detector.png",
         "skills": ["python", "bert", "keras", "pandas"],
-        "source": "https://gitlab.com/medislamm123/aaml-project"
+        "source": "https://gitlab.com/mekadmini/aaml-project"
     },
     {
         "id": 3,
@@ -35,7 +35,7 @@
         "imgSrc": "projects/parkmylatex.png",
         "skills": ["python", "django", "OpenAI API"],
         "link": "https://parkmylatex.xn--i-zfa.at/",
-        "source": "https://github.com/medislamm123/park-my-latex-server"
+        "source": "https://github.com/mekadmini/park-my-latex-server"
     },
     {
         "id": 5,
