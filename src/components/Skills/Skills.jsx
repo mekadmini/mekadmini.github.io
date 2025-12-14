@@ -7,12 +7,20 @@ export const Skills = () => {
     const {t} = useTranslation();
 
     return (
-        <section className={styles.container}>
+        <section className={styles.container} id="skills">
             <h2 className={styles.title}>{t('skills')}</h2>
-            <div className={styles.skillsGrid}>
-                {skills.map((skill, id) => (
-                    <div key={id} className={styles.skillPill}>
-                        {skill}
+
+            <div className={styles.categoriesContainer}>
+                {Object.entries(skills).map(([category, skillList], index) => (
+                    <div key={index} className={styles.categoryGroup}>
+                        <h3 className={styles.categoryTitle}>{t(category)}</h3>
+                        <div className={styles.skillsGrid}>
+                            {skillList.map((skill, id) => (
+                                <div key={id} className={styles.skillPill}>
+                                    {skill}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 ))}
             </div>

@@ -16,5 +16,9 @@
     "link": "Link",
     "source": "Quelle",
     "video": "Video",
-    "report": "Bericht"
+    "report": "Bericht",
+    "languages": "Sprachen",
+    "frameworks": "Frameworks & Bibliotheken",
+    "tools": "Tools & Plattformen",
+    "concepts": "Kernkompetenzen"
 }

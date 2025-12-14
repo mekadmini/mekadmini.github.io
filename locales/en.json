@@ -16,5 +16,9 @@
     "link":"Link",
     "source":"Source",
     "video": "Video",
-    "report": "Report"
+    "report": "Report",
+    "languages": "Languages",
+    "frameworks": "Frameworks & Libraries",
+    "tools": "Tools & Platforms",
+    "concepts": "Core Concepts"
 }
